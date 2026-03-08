@@ -114,20 +114,20 @@ function App() {
         <option value="below">Below 3⭐️</option>
       </select>
      </div>
-      {data.slice(start, end).map((el) => (
-        <Prouduct product={el} />
+      {data.slice(start, end).map((el,idx) => (
+        <Prouduct key={idx} product={el} />
       ))}
       <div className="flex p-10 justify-center items-center ">
         <span id="left" onClick={handelArrow} className="text-4xl cursor-pointer">⬅️</span>
         <div id="container" className="flex-wrap flex content-center" onClick={handelPageNo}>
-          {[...Array(noOfPages)].keys().map((el) => (
-            <span id={el} className={`max-sm:p-1 p-2 mx-1 my-2 border-2 cursor-pointer max-sm:text-sm ${curr == el ? "bg-red-500" : ""} `}
+          {[...Array(noOfPages)].keys().map((el,idn) => (
+            <span id={el} key={idn} className={`max-sm:p-1 p-2 mx-1 my-2 border-2 cursor-pointer max-sm:text-sm ${curr == el ? "bg-red-500" : ""} `}
             >
               {el}
             </span>
           ))}
         </div>
-        <span id="right" onClick={handelArrow} className="text-4xl cursor-pointer">➡️</span>
+        <span id="right"  onClick={handelArrow} className="text-4xl cursor-pointer">➡️</span>
       </div>
     </div>
   ) : (
