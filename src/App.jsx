@@ -12,9 +12,9 @@ function App() {
   const [originalData, setOriginalData] = useState([]);
 
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
 
   function filterData(e){
@@ -131,7 +131,11 @@ function App() {
       </div>
     </div>
   ) : (
-    <div>no data</div>
+    <div className="flex flex-col items-center justify-center h-screen bg-black text-white" >
+      <div className="text-center text-3xl font-bold p-5">Pagination & Filters</div>
+      <div className=" text-5xl animate-bounce">😿</div>
+      <div className="">No data</div>
+    </div>
   );
 }
 
