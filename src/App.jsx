@@ -119,9 +119,9 @@ function App() {
       ))}
       <div className="flex p-10 justify-center items-center ">
         <span id="left" onClick={handelArrow} className="text-4xl cursor-pointer">⬅️</span>
-        <div id="container" onClick={handelPageNo}>
+        <div id="container" className="flex-wrap flex content-center" onClick={handelPageNo}>
           {[...Array(noOfPages)].keys().map((el) => (
-            <span id={el} className={`p-2 mx-1 border-2 cursor-pointer ${curr == el ? "bg-red-500" : ""} `}
+            <span id={el} className={`max-sm:p-1 p-2 mx-1 my-2 border-2 cursor-pointer max-sm:text-sm ${curr == el ? "bg-red-500" : ""} `}
             >
               {el}
             </span>
