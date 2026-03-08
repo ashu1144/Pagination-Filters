@@ -12,9 +12,9 @@ function App() {
   const [originalData, setOriginalData] = useState([]);
 
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
 
   function filterData(e){
