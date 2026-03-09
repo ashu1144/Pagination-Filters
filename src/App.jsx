@@ -98,7 +98,7 @@ function App() {
   }
 
   return data.length ? (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white h-full w-full min-h-screen">
       <div className="text-center text-3xl font-bold p-5">Pagination & Filters</div>
      <div className="text-center">
        <select onClick={filterData} className="p-2 mx-2 border rounded text-white capitalize">
